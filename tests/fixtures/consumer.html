@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>SCUI package consumer</title><link rel="icon" href="/src/assets/game/icon_jewel.png" /><link rel="stylesheet" href="/dist/shiny-colors-ui.css" /></head>
+  <body>
+    <div id="consumer"></div>
+    <script type="module">
+      import { createApp, h, ref } from 'vue'
+      import { ScButton, ScCheckbox, ScProgress, ScIcon } from '/dist/shiny-colors-ui.js'
+      createApp({
+        setup() {
+          const checked = ref(false)
+          return () => h('main', { style: 'padding:24px;display:grid;gap:20px;max-width:400px' }, [
+            h(ScButton, { variant: 'primary' }, () => '库内按钮'),
+            h(ScCheckbox, { modelValue: checked.value, 'onUpdate:modelValue': value => checked.value = value, label: '库内复选框' }),
+            h('output', { role: 'status', 'aria-label': '选择状态' }, checked.value ? '已选择' : '未选择'),
+            h(ScProgress, { value: 40, label: '库内进度' }),
+            h(ScIcon, { name: 'icon_jewel.png', size: 32 }),
+          ])
+        },
+      }).mount('#consumer')
+    </script>
+  </body>
+</html>

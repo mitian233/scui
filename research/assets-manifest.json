@@ -1,0 +1,1086 @@
+{
+  "source": "https://shinycolors.enza.fun",
+  "capturedAt": "2026-10-01T06:52:07.340Z",
+  "atlases": [
+    {
+      "path": "images/ui/init/parts.json",
+      "imageUrl": "/assets/3217e3876a747e0f5a700306cfcaddb91f11117ece9f36b84e0cc9d3a45854e3?v=12"
+    },
+    {
+      "path": "images/ui/init/parts_pop.json",
+      "imageUrl": "/assets/953184fd7f2b2171701b2c3f7f31cec39a06937d3c60b6d8d1a86b63d091bfea?v=13"
+    },
+    {
+      "path": "images/ui/start_and_common/parts.json",
+      "imageUrl": "/assets/fd8c643a32d9be65a1073733e21cb8f6f9f980fd725a926393b331e51e61fa00?v=13"
+    },
+    {
+      "path": "images/ui/start/parts.json",
+      "imageUrl": "/assets/6e85b77fef4cc3b47c4b957dbecb77878f264950085050b4fdbcbde6de487c01?v=13"
+    },
+    {
+      "path": "particles/common/tap_effect/images.json",
+      "imageUrl": "/assets/3748c3efad2f6b0e159be01d84aa43bfdd31dc0a5f7550da942fa5bffd688966?v=8"
+    },
+    {
+      "path": "images/ui/deprecation/parts.json",
+      "imageUrl": "/assets/6ee32b1d55d614543691d696d40c7e2ae5eabee2f614bcdddbaea47242069b80?v=9"
+    },
+    {
+      "path": "images/ui/common/parts.json",
+      "imageUrl": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "path": "images/ui/common/parts_buttons.json",
+      "imageUrl": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "path": "images/ui/common/parts_icons.json",
+      "imageUrl": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "path": "images/ui/common/parts_filter.json",
+      "imageUrl": "/assets/1cd54c579072711c7921bcfcf8a6cbac2e419b61fa3439c43ab850bf0ed1ff08?v=6"
+    },
+    {
+      "path": "images/ui/option/parts.json",
+      "imageUrl": "/assets/9b38494e2dc9016e539cd559abda319825d992030b23dcbd27dd3b533c97e30e?v=30"
+    }
+  ],
+  "assets": [
+    {
+      "name": "title.png",
+      "width": 380,
+      "height": 162,
+      "frame": {
+        "x": 1,
+        "y": 84,
+        "width": 380,
+        "height": 162,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 84,
+        "width": 380,
+        "height": 162,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/6e85b77fef4cc3b47c4b957dbecb77878f264950085050b4fdbcbde6de487c01?v=13"
+    },
+    {
+      "name": "decision_button.png",
+      "width": 148,
+      "height": 70,
+      "frame": {
+        "x": 605,
+        "y": 711,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 605,
+        "y": 711,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "cancel_button.png",
+      "width": 148,
+      "height": 70,
+      "frame": {
+        "x": 917,
+        "y": 319,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 917,
+        "y": 319,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "ok_button.png",
+      "width": 148,
+      "height": 70,
+      "frame": {
+        "x": 620,
+        "y": 1313,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 620,
+        "y": 1313,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "yes_button.png",
+      "width": 148,
+      "height": 70,
+      "frame": {
+        "x": 1406,
+        "y": 1038,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 1406,
+        "y": 1038,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "no_button.png",
+      "width": 148,
+      "height": 70,
+      "frame": {
+        "x": 771,
+        "y": 1239,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 771,
+        "y": 1239,
+        "width": 148,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "back_button.png",
+      "width": 70,
+      "height": 70,
+      "frame": {
+        "x": 531,
+        "y": 597,
+        "width": 70,
+        "height": 70,
+        "type": 1
+      },
+      "orig": {
+        "x": 531,
+        "y": 597,
+        "width": 70,
+        "height": 70,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "close_icon_button.png",
+      "width": 42,
+      "height": 42,
+      "frame": {
+        "x": 1564,
+        "y": 150,
+        "width": 42,
+        "height": 42,
+        "type": 1
+      },
+      "orig": {
+        "x": 1564,
+        "y": 150,
+        "width": 42,
+        "height": 42,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "plus_button.png",
+      "width": 62,
+      "height": 53,
+      "frame": {
+        "x": 1492,
+        "y": 1353,
+        "width": 62,
+        "height": 53,
+        "type": 1
+      },
+      "orig": {
+        "x": 1492,
+        "y": 1353,
+        "width": 62,
+        "height": 53,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "minus_button.png",
+      "width": 62,
+      "height": 53,
+      "frame": {
+        "x": 1526,
+        "y": 548,
+        "width": 62,
+        "height": 53,
+        "type": 1
+      },
+      "orig": {
+        "x": 1526,
+        "y": 548,
+        "width": 62,
+        "height": 53,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "filter_on_button.png",
+      "width": 148,
+      "height": 38,
+      "frame": {
+        "x": 569,
+        "y": 59,
+        "width": 148,
+        "height": 38,
+        "type": 1
+      },
+      "orig": {
+        "x": 569,
+        "y": 59,
+        "width": 148,
+        "height": 38,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/1cd54c579072711c7921bcfcf8a6cbac2e419b61fa3439c43ab850bf0ed1ff08?v=6"
+    },
+    {
+      "name": "filter_off_button.png",
+      "width": 148,
+      "height": 38,
+      "frame": {
+        "x": 417,
+        "y": 59,
+        "width": 148,
+        "height": 38,
+        "type": 1
+      },
+      "orig": {
+        "x": 417,
+        "y": 59,
+        "width": 148,
+        "height": 38,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/1cd54c579072711c7921bcfcf8a6cbac2e419b61fa3439c43ab850bf0ed1ff08?v=6"
+    },
+    {
+      "name": "setting_on_button_on.png",
+      "width": 149,
+      "height": 60,
+      "frame": {
+        "x": 763,
+        "y": 583,
+        "width": 149,
+        "height": 60,
+        "type": 1
+      },
+      "orig": {
+        "x": 763,
+        "y": 583,
+        "width": 149,
+        "height": 60,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "setting_off_button_on.png",
+      "width": 149,
+      "height": 60,
+      "frame": {
+        "x": 613,
+        "y": 509,
+        "width": 149,
+        "height": 60,
+        "type": 1
+      },
+      "orig": {
+        "x": 613,
+        "y": 509,
+        "width": 149,
+        "height": 60,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/8f5a4652a6d1d7a160fa53c7c06f245463066358eaf592a4be18e5a7a634f24a?v=85"
+    },
+    {
+      "name": "select_check_box_off.png",
+      "width": 48,
+      "height": 48,
+      "frame": {
+        "x": 859,
+        "y": 911,
+        "width": 48,
+        "height": 48,
+        "type": 1
+      },
+      "orig": {
+        "x": 859,
+        "y": 911,
+        "width": 48,
+        "height": 48,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "select_check_box_on.png",
+      "width": 48,
+      "height": 48,
+      "frame": {
+        "x": 911,
+        "y": 911,
+        "width": 48,
+        "height": 48,
+        "type": 1
+      },
+      "orig": {
+        "x": 911,
+        "y": 911,
+        "width": 48,
+        "height": 48,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "active_select_base.png",
+      "width": 34,
+      "height": 34,
+      "frame": {
+        "x": 684,
+        "y": 919,
+        "width": 34,
+        "height": 34,
+        "type": 1
+      },
+      "orig": {
+        "x": 684,
+        "y": 919,
+        "width": 34,
+        "height": 34,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "active_select_base_on.png",
+      "width": 34,
+      "height": 34,
+      "frame": {
+        "x": 911,
+        "y": 423,
+        "width": 34,
+        "height": 34,
+        "type": 1
+      },
+      "orig": {
+        "x": 911,
+        "y": 423,
+        "width": 34,
+        "height": 34,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "tab_base.png",
+      "width": 186,
+      "height": 640,
+      "frame": {
+        "x": 1,
+        "y": 64,
+        "width": 186,
+        "height": 640,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 64,
+        "width": 186,
+        "height": 640,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "detail_tab_base.png",
+      "width": 430,
+      "height": 8,
+      "frame": {
+        "x": 191,
+        "y": 701,
+        "width": 430,
+        "height": 8,
+        "type": 1
+      },
+      "orig": {
+        "x": 191,
+        "y": 701,
+        "width": 430,
+        "height": 8,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "option_tab_base.png",
+      "width": 206,
+      "height": 8,
+      "frame": {
+        "x": 476,
+        "y": 1,
+        "width": 206,
+        "height": 8,
+        "type": 1
+      },
+      "orig": {
+        "x": 476,
+        "y": 1,
+        "width": 206,
+        "height": 8,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/9b38494e2dc9016e539cd559abda319825d992030b23dcbd27dd3b533c97e30e?v=30"
+    },
+    {
+      "name": "common_header_base_l_no_icon.png",
+      "width": 371,
+      "height": 56,
+      "frame": {
+        "x": 1,
+        "y": 795,
+        "width": 371,
+        "height": 56,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 795,
+        "width": 371,
+        "height": 56,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "pop_stretch.png",
+      "width": 164,
+      "height": 108,
+      "frame": {
+        "x": 463,
+        "y": 1,
+        "width": 164,
+        "height": 108,
+        "type": 1
+      },
+      "orig": {
+        "x": 463,
+        "y": 1,
+        "width": 164,
+        "height": 108,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/953184fd7f2b2171701b2c3f7f31cec39a06937d3c60b6d8d1a86b63d091bfea?v=13"
+    },
+    {
+      "name": "pop_stretch_inner_base.png",
+      "width": 22,
+      "height": 22,
+      "frame": {
+        "x": 754,
+        "y": 61,
+        "width": 22,
+        "height": 22,
+        "type": 1
+      },
+      "orig": {
+        "x": 754,
+        "y": 61,
+        "width": 22,
+        "height": 22,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/953184fd7f2b2171701b2c3f7f31cec39a06937d3c60b6d8d1a86b63d091bfea?v=13"
+    },
+    {
+      "name": "pop_stretch_white.png",
+      "width": 60,
+      "height": 60,
+      "frame": {
+        "x": 826,
+        "y": 145,
+        "width": 60,
+        "height": 60,
+        "type": 1
+      },
+      "orig": {
+        "x": 826,
+        "y": 145,
+        "width": 60,
+        "height": 60,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/953184fd7f2b2171701b2c3f7f31cec39a06937d3c60b6d8d1a86b63d091bfea?v=13"
+    },
+    {
+      "name": "stretch_text_input_base.png",
+      "width": 17,
+      "height": 15,
+      "frame": {
+        "x": 551,
+        "y": 603,
+        "width": 17,
+        "height": 15,
+        "type": 1
+      },
+      "orig": {
+        "x": 551,
+        "y": 603,
+        "width": 17,
+        "height": 15,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "text_box_base.png",
+      "width": 21,
+      "height": 24,
+      "frame": {
+        "x": 938,
+        "y": 877,
+        "width": 21,
+        "height": 24,
+        "type": 1
+      },
+      "orig": {
+        "x": 938,
+        "y": 877,
+        "width": 21,
+        "height": 24,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "option_list_content_base.png",
+      "width": 23,
+      "height": 26,
+      "frame": {
+        "x": 933,
+        "y": 107,
+        "width": 23,
+        "height": 26,
+        "type": 1
+      },
+      "orig": {
+        "x": 933,
+        "y": 107,
+        "width": 23,
+        "height": 26,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "bar_base.png",
+      "width": 462,
+      "height": 13,
+      "frame": {
+        "x": 1,
+        "y": 65,
+        "width": 462,
+        "height": 13,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 65,
+        "width": 462,
+        "height": 13,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/9b38494e2dc9016e539cd559abda319825d992030b23dcbd27dd3b533c97e30e?v=30"
+    },
+    {
+      "name": "bar_value.png",
+      "width": 469,
+      "height": 28,
+      "frame": {
+        "x": 1,
+        "y": 33,
+        "width": 469,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 33,
+        "width": 469,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/9b38494e2dc9016e539cd559abda319825d992030b23dcbd27dd3b533c97e30e?v=30"
+    },
+    {
+      "name": "handle.png",
+      "width": 24,
+      "height": 55,
+      "frame": {
+        "x": 694,
+        "y": 1,
+        "width": 24,
+        "height": 55,
+        "type": 1
+      },
+      "orig": {
+        "x": 694,
+        "y": 1,
+        "width": 24,
+        "height": 55,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/9b38494e2dc9016e539cd559abda319825d992030b23dcbd27dd3b533c97e30e?v=30"
+    },
+    {
+      "name": "loading_indicator.png",
+      "width": 126,
+      "height": 130,
+      "frame": {
+        "x": 551,
+        "y": 416,
+        "width": 126,
+        "height": 130,
+        "type": 1
+      },
+      "orig": {
+        "x": 551,
+        "y": 416,
+        "width": 126,
+        "height": 130,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "loading_indicator_base.png",
+      "width": 180,
+      "height": 180,
+      "frame": {
+        "x": 566,
+        "y": 735,
+        "width": 180,
+        "height": 180,
+        "type": 1
+      },
+      "orig": {
+        "x": 566,
+        "y": 735,
+        "width": 180,
+        "height": 180,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "gauge_mission.png",
+      "width": 240,
+      "height": 24,
+      "frame": {
+        "x": 1,
+        "y": 885,
+        "width": 240,
+        "height": 24,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 885,
+        "width": 240,
+        "height": 24,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "gauge_mission_base.png",
+      "width": 242,
+      "height": 26,
+      "frame": {
+        "x": 1,
+        "y": 855,
+        "width": 242,
+        "height": 26,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 855,
+        "width": 242,
+        "height": 26,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "icon_jewel.png",
+      "width": 148,
+      "height": 148,
+      "frame": {
+        "x": 1,
+        "y": 761,
+        "width": 148,
+        "height": 148,
+        "type": 1
+      },
+      "orig": {
+        "x": 1,
+        "y": 761,
+        "width": 148,
+        "height": 148,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_money.png",
+      "width": 148,
+      "height": 148,
+      "frame": {
+        "x": 305,
+        "y": 457,
+        "width": 148,
+        "height": 148,
+        "type": 1
+      },
+      "orig": {
+        "x": 305,
+        "y": 457,
+        "width": 148,
+        "height": 148,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_status_vocal.png",
+      "width": 28,
+      "height": 28,
+      "frame": {
+        "x": 1202,
+        "y": 981,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 1202,
+        "y": 981,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_status_dance.png",
+      "width": 28,
+      "height": 28,
+      "frame": {
+        "x": 740,
+        "y": 1048,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 740,
+        "y": 1048,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_status_visual.png",
+      "width": 28,
+      "height": 28,
+      "frame": {
+        "x": 1278,
+        "y": 887,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 1278,
+        "y": 887,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_status_mental.png",
+      "width": 28,
+      "height": 28,
+      "frame": {
+        "x": 772,
+        "y": 1048,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 772,
+        "y": 1048,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_status_skill_point.png",
+      "width": 28,
+      "height": 28,
+      "frame": {
+        "x": 804,
+        "y": 1047,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "orig": {
+        "x": 804,
+        "y": 1047,
+        "width": 28,
+        "height": 28,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "icon_notice.png",
+      "width": 26,
+      "height": 27,
+      "frame": {
+        "x": 1187,
+        "y": 555,
+        "width": 26,
+        "height": 27,
+        "type": 1
+      },
+      "orig": {
+        "x": 1187,
+        "y": 555,
+        "width": 26,
+        "height": 27,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/50989a84739aa52800afb56fb9cac1330207c874390b256ca2acde5e4bd74c75?v=46"
+    },
+    {
+      "name": "common_menu_badge_new.png",
+      "width": 60,
+      "height": 21,
+      "frame": {
+        "x": 279,
+        "y": 933,
+        "width": 60,
+        "height": 21,
+        "type": 1
+      },
+      "orig": {
+        "x": 279,
+        "y": 933,
+        "width": 60,
+        "height": 21,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "speaker.png",
+      "width": 14,
+      "height": 17,
+      "frame": {
+        "x": 922,
+        "y": 639,
+        "width": 14,
+        "height": 17,
+        "type": 1
+      },
+      "orig": {
+        "x": 922,
+        "y": 639,
+        "width": 14,
+        "height": 17,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "check_icon.png",
+      "width": 30,
+      "height": 24,
+      "frame": {
+        "x": 532,
+        "y": 883,
+        "width": 30,
+        "height": 24,
+        "type": 1
+      },
+      "orig": {
+        "x": 532,
+        "y": 883,
+        "width": 30,
+        "height": 24,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    },
+    {
+      "name": "next_arrow.png",
+      "width": 16,
+      "height": 16,
+      "frame": {
+        "x": 922,
+        "y": 619,
+        "width": 16,
+        "height": 16,
+        "type": 1
+      },
+      "orig": {
+        "x": 922,
+        "y": 619,
+        "width": 16,
+        "height": 16,
+        "type": 1
+      },
+      "trim": null,
+      "rotated": 0,
+      "source": "/assets/339f113f638b026327dc3b5f678083c1cacf49073f2fa85574f4ae9c7dde8fbb?v=49"
+    }
+  ]
+}

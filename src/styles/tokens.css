@@ -1,0 +1,15 @@
+.sc-theme, :root {
+  --sc-pink: #ff40aa;
+  --sc-pink-dark: #aa1765;
+  --sc-pink-light: #fff0f8;
+  --sc-ink: #615365;
+  --sc-ink-muted: #796c80;
+  --sc-line: #d7cddd;
+  --sc-surface: #ffffff;
+  --sc-lavender: #e6e4fc;
+  --sc-blue: #2c73bb;
+  --sc-radius: 12px;
+  --sc-font: 'Hiragino Maru Gothic ProN', 'Yu Gothic', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
+  --sc-focus: 0 0 0 3px #fff, 0 0 0 5px #ad2980;
+  --sc-ease: cubic-bezier(.16, 1, .3, 1);
+}

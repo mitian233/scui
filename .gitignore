@@ -1,0 +1,9 @@
+node_modules/
+dist/
+dist-demo/
+.cache/
+test-results/
+playwright-report/
+research/game-app.js
+research/asset-map.json
+LOCAL_NOTES.md
