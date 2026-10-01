@@ -89,16 +89,16 @@ test('progress completes and asset filter exposes all 47 original sprites', asyn
 })
 
 test('desktop and mobile layouts have no horizontal overflow', async ({ page }) => {
-  await mkdir('research/previews', { recursive: true })
+  await mkdir('test-results', { recursive: true })
   for (const [name, viewport] of [['desktop', { width: 1440, height: 1000 }], ['mobile', { width: 390, height: 844 }]] as const) {
     await page.setViewportSize(viewport)
     await page.waitForLoadState('networkidle')
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true)
-    await page.screenshot({ path: `research/previews/${name}.png`, animations: 'disabled' })
+    await page.screenshot({ path: `test-results/${name}.png`, animations: 'disabled' })
     await page.locator('#forms').scrollIntoViewIfNeeded()
-    await page.screenshot({ path: `research/previews/${name}-forms.png`, animations: 'disabled' })
+    await page.screenshot({ path: `test-results/${name}-forms.png`, animations: 'disabled' })
     await page.getByRole('button', { name: '打开弹窗', exact: true }).click()
-    await page.screenshot({ path: `research/previews/${name}-dialog.png`, animations: 'disabled' })
+    await page.screenshot({ path: `test-results/${name}-dialog.png`, animations: 'disabled' })
     await page.keyboard.press('Escape')
     await page.evaluate(() => scrollTo(0, 0))
   }

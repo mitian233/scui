@@ -2,7 +2,8 @@
 import { DialogRoot, DialogTrigger, DialogPortal, DialogOverlay, DialogContent, DialogTitle, DialogDescription, DialogClose } from 'reka-ui'
 import ScButton from './ScButton.vue'
 import ScImageButton from './ScImageButton.vue'
-withDefaults(defineProps<{ title: string; description?: string; closeLabel?: string }>(), { description: '', closeLabel: '关闭' })
+import type { ComponentSkin } from '../types'
+withDefaults(defineProps<{ title: string; description?: string; closeLabel?: string; skin?: ComponentSkin }>(), { description: '', closeLabel: '关闭', skin: 'default' })
 const open = defineModel<boolean>('open', { default: false })
 </script>
 
@@ -11,7 +12,7 @@ const open = defineModel<boolean>('open', { default: false })
     <DialogTrigger v-if="$slots.trigger" as-child><slot name="trigger" /></DialogTrigger>
     <DialogPortal>
       <DialogOverlay class="sc-dialog-overlay" />
-      <DialogContent class="sc-dialog">
+      <DialogContent :class="['sc-dialog', { 'sc-dialog--game': skin === 'game' }]">
         <header class="sc-dialog__header">
           <DialogTitle class="sc-dialog__title">{{ title }}</DialogTitle>
           <DialogClose as-child><ScImageButton preset="close" :label="closeLabel" /></DialogClose>

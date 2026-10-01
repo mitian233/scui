@@ -5,16 +5,34 @@
     <div id="consumer"></div>
     <script type="module">
       import { createApp, h, ref } from 'vue'
-      import { ScButton, ScCheckbox, ScProgress, ScIcon } from '/dist/shiny-colors-ui.js'
+      import { ScButton, ScCheckbox, ScProgress, ScIcon, ScFilterButton, ScToggleGroup, ScLoader, ScHeader, ScNewBadge, ScSelectableItem, ScSelectionGroup, ScInput, ScPanel, ScTabs, ScDialog } from '/dist/shiny-colors-ui.js'
       createApp({
         setup() {
           const checked = ref(false)
+          const filtered = ref(false)
+          const sound = ref(true)
+          const selected = ref('a')
+          const loading = ref(false)
+          const open = ref(false)
           return () => h('main', { style: 'padding:24px;display:grid;gap:20px;max-width:400px' }, [
             h(ScButton, { variant: 'primary' }, () => '库内按钮'),
             h(ScCheckbox, { modelValue: checked.value, 'onUpdate:modelValue': value => checked.value = value, label: '库内复选框' }),
             h('output', { role: 'status', 'aria-label': '选择状态' }, checked.value ? '已选择' : '未选择'),
             h(ScProgress, { value: 40, label: '库内进度' }),
             h(ScIcon, { name: 'icon_jewel.png', size: 32 }),
+            h(ScHeader, { title: '库内原作标题' }),
+            h(ScFilterButton, { label: '库内筛选', modelValue: filtered.value, 'onUpdate:modelValue': value => filtered.value = value }),
+            h(ScToggleGroup, { label: '库内ON/OFF', modelValue: sound.value, 'onUpdate:modelValue': value => sound.value = value }),
+            h(ScSelectableItem, { label: '库内选择项', modelValue: checked.value, 'onUpdate:modelValue': value => checked.value = value }),
+            h(ScSelectionGroup, { label: '库内单选组', items: [{ value: 'a', label: '选项A' }, { value: 'b', label: '选项B' }], modelValue: selected.value, 'onUpdate:modelValue': value => selected.value = value }),
+            h(ScNewBadge),
+            h(ScPanel, { skin: 'game', title: '库内原作面板' }, () => h(ScInput, { label: '库内原作输入', skin: 'game' })),
+            h(ScTabs, { skin: 'game', items: [{ value: 'one', label: '库内页签' }] }, { one: () => '页签内容' }),
+            h(ScProgress, { variant: 'mission', value: 200, label: '库内任务进度' }),
+            h(ScProgress, { variant: 'mission', value: NaN, label: '无效任务进度' }),
+            h(ScButton, { onClick: () => loading.value = true }, () => '库内全屏加载'),
+            h(ScLoader, { active: loading.value, fullscreen: true, label: '全屏加载状态' }, () => h(ScButton, { onClick: () => loading.value = false }, () => '停止加载')),
+            h(ScDialog, { skin: 'game', title: '库内原作弹窗', open: open.value, 'onUpdate:open': value => open.value = value }, { trigger: () => h(ScButton, {}, () => '库内弹窗入口'), default: () => '原作边框内容' }),
           ])
         },
       }).mount('#consumer')

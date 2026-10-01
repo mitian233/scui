@@ -103,6 +103,14 @@ a { color: #a22b76; text-underline-offset: 4px; }
 .asset-tile figcaption small { display: block; margin-top: 3px; color: var(--sc-ink-muted); font-size: 10px; }
 .asset-attribution { margin: 22px 0 0; color: var(--sc-ink-muted); font-size: 11px; line-height: 1.9; overflow-wrap: anywhere; }
 .asset-attribution code { font-size: 10px; }
+.game-demo-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 24px; }
+.game-demo-column { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.game-demo-column > p { margin: 0; }
+.game-demo-column .sc-tabs__content > * + * { margin-top: 20px; }
+.game-demo-badge-anchor { position: relative; display: inline-flex; }
+.game-demo-loading { position: relative; min-height: 140px; padding: 20px; background: #f6f4fd; border-radius: 10px; }
+.game-demo-inline-loaders { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; }
+@media (max-width: 800px) { .game-demo-columns { grid-template-columns: minmax(0, 1fr); } }
 .welcome-dialog-content { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 .welcome-dialog-content p { font-size: 13px; margin: 0; }
 .welcome-stage__actions { display: flex; align-items: center; gap: 16px; }

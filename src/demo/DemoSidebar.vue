@@ -8,6 +8,7 @@ const links = [
   { id: 'navigation', label: '导航与展开', icon: 'icon_status_visual.png', count: '02' },
   { id: 'overlays', label: '面板与弹窗', icon: 'icon_status_mental.png', count: '02' },
   { id: 'feedback', label: '状态与反馈', icon: 'icon_status_skill_point.png', count: '03' },
+  { id: 'game', label: '原作控件与皮肤', icon: 'icon_notice.png', count: '07' },
   { id: 'assets', label: '图标与素材', icon: 'icon_jewel.png', count: '47' },
 ]
 </script>

@@ -1,6 +1,23 @@
 import { test, expect } from '@playwright/test'
 import { existsSync } from 'node:fs'
 
+test('built catalog includes component skins and serves its assets independently', async ({ page }) => {
+  test.skip(!existsSync('dist-demo/index.html'), 'Run npm run build before checking the built catalog.')
+  const errors: string[] = []
+  page.on('pageerror', error => errors.push(error.message))
+  await page.goto('/dist-demo/index.html')
+  await expect(page.getByRole('heading', { name: 'Shiny Colors UI' })).toBeVisible()
+  await expect(page.locator('#game').getByRole('button', { name: '筛选课程' })).toHaveCSS('display', 'flex')
+  await expect(page.locator('#game .sc-header')).toHaveCSS('border-image-source', /url\(/)
+  await expect(page.locator('#game .sc-panel--game')).toHaveCSS('border-image-source', /url\(/)
+  await page.locator('#game').getByRole('button', { name: '原作弹窗', exact: true }).click()
+  await expect(page.getByRole('dialog', { name: '原作确认弹窗' })).toHaveCSS('position', 'fixed')
+  await page.keyboard.press('Escape')
+  await page.waitForLoadState('networkidle')
+  expect(await page.locator('img').evaluateAll(images => images.every(image => (image as HTMLImageElement).naturalWidth > 0))).toBe(true)
+  expect(errors).toEqual([])
+})
+
 test('built library works with its own stylesheet and public exports', async ({ page }) => {
   test.skip(!existsSync('dist/shiny-colors-ui.js'), 'Run npm run build before checking the built package.')
   await page.goto('/tests/fixtures/consumer.html')
@@ -10,5 +27,23 @@ test('built library works with its own stylesheet and public exports', async ({ 
   await expect(page.getByRole('status', { name: '选择状态' })).toHaveText('已选择')
   await expect(page.getByRole('progressbar', { name: '库内进度' })).toHaveAttribute('aria-valuenow', '40')
   expect(await page.locator('img').evaluateAll(images => images.every(image => (image as HTMLImageElement).naturalWidth > 0))).toBe(true)
-  await expect(page.locator('.sc-button')).toHaveCSS('height', '52px')
+  await expect(page.getByRole('button', { name: '库内按钮', exact: true })).toHaveCSS('height', '52px')
+  await expect(page.getByRole('heading', { name: '库内原作标题' })).toBeVisible()
+  await page.getByRole('button', { name: '库内筛选' }).click()
+  await expect(page.getByRole('button', { name: '库内筛选' })).toHaveAttribute('aria-pressed', 'true')
+  await page.getByRole('radiogroup', { name: '库内ON/OFF' }).getByRole('radio', { name: 'OFF', exact: true }).click()
+  await expect(page.getByRole('radiogroup', { name: '库内ON/OFF' }).getByRole('radio', { name: 'OFF', exact: true })).toBeChecked()
+  await page.getByRole('radio', { name: '选项B' }).click()
+  await expect(page.getByRole('radio', { name: '选项B' })).toBeChecked()
+  await expect(page.getByRole('progressbar', { name: '库内任务进度' })).toHaveAttribute('aria-valuenow', '100')
+  await expect(page.getByRole('progressbar', { name: '无效任务进度' })).toHaveAttribute('aria-valuenow', '0')
+  await page.getByRole('button', { name: '库内全屏加载' }).click()
+  const loader = page.getByRole('status', { name: '全屏加载状态' })
+  await expect(loader).toHaveCSS('position', 'fixed')
+  expect(await loader.evaluate(element => element.parentElement === document.body)).toBe(true)
+  await loader.getByRole('button', { name: '停止加载' }).click()
+  await expect(loader).toHaveCount(0)
+  await page.getByRole('button', { name: '库内弹窗入口' }).click()
+  await expect(page.getByRole('dialog', { name: '库内原作弹窗' })).toBeVisible()
+  await page.keyboard.press('Escape')
 })

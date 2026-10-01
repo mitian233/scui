@@ -1,6 +1,6 @@
 # Shiny Colors UI · SCUI
 
-基于 **Vue 3 + TypeScript + Reka UI** 的通用组件库，参考 [アイドルマスター シャイニーカラーズ](https://shinycolors.enza.fun/) 的游戏 UI。包含 16 个组件、47 份原游戏 UI 素材、交互展示页和浏览器测试。
+基于 **Vue 3 + TypeScript + Reka UI** 的通用组件库，参考 [アイドルマスター シャイニーカラーズ](https://shinycolors.enza.fun/) 的游戏 UI。包含 23 个组件、47 份原游戏 UI 素材、交互展示页和浏览器测试。
 
 当前版本：**0.1.0**。
 
@@ -74,6 +74,39 @@ const volume = ref(65)
 | `ScBadge` | `variant`: pink / blue / neutral | 默认文本内容 |
 | `ScStat` | `tone`: vocal / dance / visual / mental / skill；`label`、`value` | 原作属性图标、演示属性面板 |
 | `ScAccordion` | `v-model`: string；`items`: `{ value, title, content?, disabled? }[]` | 同 value 命名的内容插槽；单项展开、可收起 |
+| `ScFilterButton` | `v-model`: boolean；`label`、`count`、`disabled` | 原作筛选 / 筛选 ON 素材，使用 aria-pressed 表示状态；count 为非负整数 |
+| `ScToggleGroup` | `v-model`: boolean；`label`（必传）、`onLabel`、`offLabel`、`disabled` | ON / OFF 互斥选择；原作矩形按钮；左右方向键切换 |
+| `ScLoader` | `active`（默认 true）、`label`、`size`: sm / md / lg；`overlay`、`fullscreen` | 原作圆点加载图；默认插槽替换提示内容；遵循 reduced-motion |
+| `ScHeader` | `title`（必传）、`icon`、`level`: 1–6（默认 2） | 原作可伸缩标题栏；`actions` 插槽放操作按钮 |
+| `ScNewBadge` | `label`、`visible`；`position`: inline / top-right / top-left | 原作 NEW!! 标记；角标的父元素设置 position: relative |
+| `ScSelectableItem` | `v-model`: boolean；`label`（必传）、`description`、`icon`、`disabled` | 独立选择项，可组合为多选列表；默认插槽放展示内容 |
+| `ScSelectionGroup` | `v-model`: string；`label`（必传）、`items`: `SelectionItem[]`、`disabled`、`orientation`、`name` | 互斥选择列表；方向键跳过禁用项；各 value 命名插槽放展示内容 |
+
+`SelectionItem` 为 `{ value, label, description?, icon?, disabled? }`。选择项插槽用于文字、图标和状态展示，避免在选择按钮内部嵌套其他交互控件。
+
+## 原作皮肤与组合
+
+`ScPanel`、`ScDialog`、`ScTabs` 和 `ScInput` 支持 `skin="game"`，默认 `skin="default"`。原作皮肤使用已有图集的可伸缩边框、弹窗装饰、页签纹理和输入框底图；组件的 model、插槽及键盘行为保持一致。`ScProgress` 的 `variant="mission"` 使用橙色任务进度素材，默认仍为粉色。
+
+```vue
+<ScHeader title="课程设置" icon="icon_status_skill_point.png">
+  <template #actions><ScFilterButton v-model="filtered" :count="2" /></template>
+</ScHeader>
+<ScPanel skin="game" title="设置">
+  <ScToggleGroup v-model="sound" label="播放语音" />
+  <ScInput skin="game" v-model="name" label="制作人名称" />
+  <ScProgress variant="mission" :value="60" label="任务进度" />
+</ScPanel>
+```
+
+加载组件支持行内、局部遮罩和通过 Teleport 渲染到 body 的全屏遮罩。局部遮罩的父容器设置 `position: relative`；加载时用 `inert` 管理被覆盖区域的键盘交互：
+
+```vue
+<div style="position: relative; min-height: 140px">
+  <div :inert="busy || undefined"><!-- 内容及操作按钮 --></div>
+  <ScLoader :active="busy" overlay label="正在读取" />
+</div>
+```
 
 ## 设计与素材
 
@@ -104,4 +137,4 @@ node scripts/collect-game-assets.mjs http://127.0.0.1:9222
 
 `npm test` 使用 Playwright，在 Windows 优先使用已安装的 Chrome/Edge，也可通过 `SCUI_BROWSER_PATH` 指定浏览器。其他环境可执行 `npx playwright install chromium` 后运行。测试覆盖双向绑定、表单校验、禁用/加载状态、页签键盘操作、弹窗焦点管理、进度、资源过滤与桌面/手机横向溢出。先构建再运行测试，会额外验证编译后的组件库在独立页面中工作；没有构建产物时仅跳过这一项。
 
-`research/previews/` 保存验证时的桌面、手机和弹窗截图。
+`research/previews/` 保存已审核的桌面、手机和弹窗截图；测试运行截图保存在 Git 忽略的 `test-results/`。展示页的「原作控件与皮肤」分区提供新增控件及原作皮肤的完整交互示例。

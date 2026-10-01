@@ -188,6 +188,17 @@ components:
 
 动效服务状态变化：开关（.2s）、进度（.25s）、弹窗渐入（.18–.2s），曲线沿用 `--sc-ease`。尊重 prefers-reduced-motion：移除这些过渡与动画，页面平滑滚动也改为即时滚动。
 
+## Original controls and skins
+
+- `ScFilterButton` 使用原作筛选与筛选 ON 两种图片，附可选数量，状态通过 aria-pressed 表达。
+- `ScToggleGroup` 以原作 ON/OFF 矩形按钮表达互斥选择，保留选中轮廓、禁用与键盘操作。
+- `ScSelectableItem` 与 `ScSelectionGroup` 共用原作选择边框素材，分别提供独立切换和互斥选择，后者支持方向键跳过禁用项。
+- `ScHeader` 将原作标题栏按切片伸缩，保留图标、标题与操作区；窄屏允许内容换行。
+- `ScLoader` 使用原作圆点及底图，提供行内、局部和全屏遮罩；减少动态效果时保持静态提示。局部加载区域由使用方通过 inert 管理交互。
+- `ScNewBadge` 保留原作 NEW!! 图片，支持行内和左右角标。
+- `skin="game"` 在面板和弹窗使用切片边框与裁切后的原作装饰，在页签使用原图纹理，在输入框使用可伸缩底图。
+- `ScProgress` 的 mission 变体使用原作橙色任务槽与填充，继承数值限制与 progressbar 语义。
+
 ## Do's and Don'ts
 
 ### Do:
