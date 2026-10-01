@@ -1,0 +1,17 @@
+/* Preview-only references to installed fonts; no font files are bundled. */
+@font-face { font-family: 'SCUI Preview Humming'; src: local('HummingStd-L'); font-style: normal; font-weight: 300; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Humming'; src: local('HummingStd-M'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Humming'; src: local('HummingStd-D'); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Humming'; src: local('HummingStd-B'); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Humming'; src: local('HummingStd-E'); font-style: normal; font-weight: 800; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Qingyin'; src: local('FZFW Qing Yin TiS L'); font-style: normal; font-weight: 300; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Qingyin'; src: local('FZFW Qing Yin TiS M'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Qingyin'; src: local('FZFW Qing Yin TiS D'); font-style: normal; font-weight: 600; font-display: swap; }
+@font-face { font-family: 'SCUI Preview Qingyin'; src: local('FZFW Qing Yin TiS B'); font-style: normal; font-weight: 700 900; font-display: swap; }
+html[data-sc-preview-fonts='local'], html[data-sc-preview-fonts='local'] .sc-theme {
+  --sc-font: 'SCUI Preview Qingyin', 'SCUI Preview Humming', 'Microsoft YaHei', sans-serif;
+}
+html[data-sc-preview-fonts='local'] [lang='ja'] {
+  --sc-font: 'SCUI Preview Humming', 'SCUI Preview Qingyin', 'Yu Gothic', sans-serif;
+  font-family: var(--sc-font);
+}

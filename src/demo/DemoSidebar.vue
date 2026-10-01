@@ -3,6 +3,7 @@ import { ScIcon } from '../index'
 defineProps<{ active: string }>()
 defineEmits<{ navigate: [id: string] }>()
 const links = [
+  { id: 'fonts', label: '本机字体预览', icon: 'icon_notice.png', count: '02' },
   { id: 'buttons', label: '按钮', icon: 'icon_status_vocal.png', count: '02' },
   { id: 'forms', label: '表单控件', icon: 'icon_status_dance.png', count: '06' },
   { id: 'navigation', label: '导航与展开', icon: 'icon_status_visual.png', count: '02' },
