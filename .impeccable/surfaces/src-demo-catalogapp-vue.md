@@ -25,7 +25,7 @@ related_targets: ["src/styles/demo.css"]
 
 ## Memorable moment and proof
 
-“同一种原作材料，一边是可编辑 DOM，一边是保留文字的原图。”按钮可操作，原作图标保持原始比例；弹窗具备真实焦点、关闭及窄屏滚动行为。依据为 `research/previews/desktop.png`、`mobile.png`、`mobile-dialog.png` 与 `src/assets/game`；CSS 复现不宣称逐像素一致。
+“同一种原作材料，一边是可编辑 DOM，一边是保留文字的原图。”按钮可操作，原作图标保持原始比例；弹窗具备真实焦点、关闭及窄屏滚动行为。素材依据保存在 `src/assets/game`；CSS 复现不宣称逐像素一致。
 
 ## Constraints
 

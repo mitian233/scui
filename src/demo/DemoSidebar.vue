@@ -10,7 +10,7 @@ const links = [
   { id: 'overlays', label: '面板与弹窗', icon: 'icon_status_mental.png', count: '02' },
   { id: 'feedback', label: '状态与反馈', icon: 'icon_status_skill_point.png', count: '03' },
   { id: 'game', label: '原作控件与皮肤', icon: 'icon_notice.png', count: '07' },
-  { id: 'assets', label: '图标与素材', icon: 'icon_jewel.png', count: '47' },
+  { id: 'assets', label: '图标与素材', icon: 'icon_jewel.png', count: '46' },
 ]
 </script>
 
@@ -20,6 +20,6 @@ const links = [
     <nav class="sidebar-nav" aria-label="组件目录"><p class="sidebar-caption">组件目录</p>
       <a v-for="link in links" :key="link.id" :href="`#${link.id}`" :class="['sidebar-link', { 'sidebar-link--active': active === link.id }]" :aria-current="active === link.id ? 'location' : undefined" @click="$emit('navigate', link.id)"><ScIcon :name="link.icon" :size="22" /><span>{{ link.label }}</span><small>{{ link.count }}</small></a>
     </nav>
-    <div class="sidebar-bottom"><span class="sidebar-flower" aria-hidden="true"></span><p>同样的闪耀。<br />新的表达方式。</p><a href="https://shinycolors.enza.fun/" target="_blank" rel="noopener noreferrer">原游戏资源来源 ↗</a><small>Unofficial · UI study</small></div>
+    <div class="sidebar-bottom"><span class="sidebar-flower" aria-hidden="true"></span><p>同样的闪耀。<br />新的表达方式。</p><small>Unofficial · UI study</small></div>
   </aside>
 </template>

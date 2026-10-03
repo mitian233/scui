@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>SCUI package consumer</title><link rel="icon" href="/src/assets/game/icon_jewel.png" /><link rel="stylesheet" href="/dist/shiny-colors-ui.css" /></head>
+  <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><title>SCUI package consumer</title><link rel="icon" href="/src/assets/game/icon_jewel.png" /><link rel="stylesheet" href="/dist/scui.css" /></head>
   <body>
     <div id="consumer"></div>
     <script type="module">
       import { createApp, h, ref } from 'vue'
-      import { ScButton, ScCheckbox, ScProgress, ScIcon, ScFilterButton, ScToggleGroup, ScLoader, ScHeader, ScNewBadge, ScSelectableItem, ScSelectionGroup, ScInput, ScPanel, ScTabs, ScDialog } from '/dist/shiny-colors-ui.js'
+      import { ScButton, ScCheckbox, ScProgress, ScIcon, ScFilterButton, ScToggleGroup, ScLoader, ScHeader, ScNewBadge, ScSelectableItem, ScSelectionGroup, ScInput, ScPanel, ScTabs, ScDialog } from '/dist/scui.js'
       createApp({
         setup() {
           const checked = ref(false)

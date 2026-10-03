@@ -1,21 +1,30 @@
 {
-  "name": "shiny-colors-ui",
+  "name": "@mitian233/scui",
   "version": "0.1.0",
-  "private": true,
   "type": "module",
-  "description": "Vue components inspired by THE IDOLM@STER Shiny Colors, built with Reka UI",
-  "files": ["dist", "README.md", "research/assets-manifest.json"],
-  "main": "./dist/shiny-colors-ui.js",
-  "module": "./dist/shiny-colors-ui.js",
+  "description": "Vue component library built with Reka UI",
+  "repository": { "type": "git", "url": "git+https://github.com/mitian233/scui.git" },
+  "publishConfig": { "access": "public" },
+  "files": [
+    "dist/*.d.ts",
+    "dist/components/*.d.ts",
+    "dist/composables/*.d.ts",
+    "dist/scui.js",
+    "dist/scui.css",
+    "README.md"
+  ],
+  "main": "./dist/scui.js",
+  "module": "./dist/scui.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/shiny-colors-ui.js" },
-    "./style.css": "./dist/shiny-colors-ui.css"
+    ".": { "types": "./dist/index.d.ts", "import": "./dist/scui.js" },
+    "./style.css": "./dist/scui.css"
   },
   "sideEffects": ["**/*.css"],
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "typecheck": "vue-tsc --noEmit",
+    "prepack": "npm run typecheck && vite build --config vite.lib.config.ts",
     "build": "npm run typecheck && vite build && vite build --config vite.lib.config.ts",
     "preview": "vite preview --host 127.0.0.1",
     "test": "playwright test"

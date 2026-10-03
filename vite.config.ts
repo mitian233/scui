@@ -4,6 +4,6 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   base: './',
   plugins: [vue()],
-  optimizeDeps: { entries: ['index.html'], exclude: ['shiny-colors-ui'] },
+  optimizeDeps: { entries: ['index.html'], exclude: ['@mitian233/scui'] },
   build: { outDir: 'dist-demo' },
 })

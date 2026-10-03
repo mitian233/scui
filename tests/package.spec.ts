@@ -6,7 +6,7 @@ test('built catalog includes component skins and serves its assets independently
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/dist-demo/index.html')
-  await expect(page.getByRole('heading', { name: 'Shiny Colors UI' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'SCUI' })).toBeVisible()
   await expect(page.locator('#game').getByRole('button', { name: '筛选课程' })).toHaveCSS('display', 'flex')
   await expect(page.locator('#game .sc-header')).toHaveCSS('border-image-source', /url\(/)
   await expect(page.locator('#game .sc-panel--game')).toHaveCSS('border-image-source', /url\(/)
@@ -19,7 +19,7 @@ test('built catalog includes component skins and serves its assets independently
 })
 
 test('built library works with its own stylesheet and public exports', async ({ page }) => {
-  test.skip(!existsSync('dist/shiny-colors-ui.js'), 'Run npm run build before checking the built package.')
+  test.skip(!existsSync('dist/scui.js'), 'Run npm run build before checking the built package.')
   await page.goto('/tests/fixtures/consumer.html')
   await expect(page.getByRole('button', { name: '库内按钮' })).toBeVisible()
   await expect(page.getByRole('checkbox', { name: '库内复选框' })).not.toBeChecked()

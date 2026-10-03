@@ -1,5 +1,4 @@
 {
-  "source": "https://shinycolors.enza.fun",
   "capturedAt": "2026-10-01T06:52:07.340Z",
   "atlases": [
     {
@@ -48,28 +47,6 @@
     }
   ],
   "assets": [
-    {
-      "name": "title.png",
-      "width": 380,
-      "height": 162,
-      "frame": {
-        "x": 1,
-        "y": 84,
-        "width": 380,
-        "height": 162,
-        "type": 1
-      },
-      "orig": {
-        "x": 1,
-        "y": 84,
-        "width": 380,
-        "height": 162,
-        "type": 1
-      },
-      "trim": null,
-      "rotated": 0,
-      "source": "/assets/6e85b77fef4cc3b47c4b957dbecb77878f264950085050b4fdbcbde6de487c01?v=13"
-    },
     {
       "name": "decision_button.png",
       "width": 148,

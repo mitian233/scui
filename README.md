@@ -1,6 +1,6 @@
-# Shiny Colors UI · SCUI
+# SCUI
 
-基于 **Vue 3 + TypeScript + Reka UI** 的通用组件库，参考 [アイドルマスター シャイニーカラーズ](https://shinycolors.enza.fun/) 的游戏 UI。包含 23 个组件、47 份原游戏 UI 素材、交互展示页和浏览器测试。
+基于 **Vue 3 + TypeScript + Reka UI** 的通用组件库。包含 23 个组件、46 份界面素材、交互展示页和浏览器测试。
 
 当前版本：**0.1.0**。
 
@@ -16,27 +16,27 @@ npm test
 
 `dev` 启动组件展示页，用于预览外观、体验交互及查看用法；`build` 输出展示站点到 `dist-demo/`、可独立引用的 ES 组件库和类型声明到 `dist/`。组件使用标准 DOM，不依赖 PixiJS。
 
-## 引用组件库
-
-在项目根目录构建并打包：
+## 安装组件库
 
 ```sh
-npm run build
-npm pack
+npm install @mitian233/scui
 ```
 
-在另一个 Vue 项目中安装生成的组件包与依赖：
+`vue@^3.5.0` 和 `reka-ui@^2.0.0` 是 peer dependencies；npm 会按项目依赖解析它们。使用组件时引入样式：
 
-```sh
-npm install /路径/shiny-colors-ui-0.1.0.tgz
-npm install vue@^3.5 reka-ui@^2
+```ts
+import '@mitian233/scui/style.css'
 ```
+
+发布包仅包含组件代码、类型声明、样式及其中内嵌的 PNG 界面素材。本机字体、字体预览样式、展示站和研究资料均不在发布包中；组件使用系统字体栈，应用可自行设置 `--sc-font`。素材采集记录见仓库的 `research/assets-manifest.json`。
+
+维护者发布前运行 `npm pack --dry-run` 检查文件清单，确认没有 `.woff`、`.woff2`、`.ttf`、`.otf`、`.ttc`、`.eot` 或字体预览配置；`npm publish` 会通过 `prepack` 自动构建。首次发布前需登录 npm 并确认包名可用。
 
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import { ScButton, ScDialog, ScCheckbox, ScSlider } from 'shiny-colors-ui'
-import 'shiny-colors-ui/style.css'
+import { ScButton, ScDialog, ScCheckbox, ScSlider } from '@mitian233/scui'
+import '@mitian233/scui/style.css'
 
 const open = ref(false)
 const selected = ref(true)
@@ -123,12 +123,12 @@ const volume = ref(65)
 
 素材位于 `src/assets/game/`，构建时打包到组件库，运行时无需访问游戏 CDN。`gameAsset('icon_jewel.png')` 返回打包后的 URL；`gameAssets` 为全部素材地址表。
 
-`research/assets-manifest.json` 记录采集时间、公开游戏源站、图集地址、裁剪区域、旋转与透明裁剪信息。素材是从游戏浏览器已正常加载的 PixiJS 纹理导出 PNG，使用原渲染器处理图集旋转/trim；没有调用游戏业务接口，也没有修改游戏状态。
+`research/assets-manifest.json` 记录采集时间、图集地址、裁剪区域、旋转与透明裁剪信息。素材是从游戏浏览器已正常加载的 PixiJS 纹理导出 PNG，使用原渲染器处理图集旋转/trim；没有调用游戏业务接口，也没有修改游戏状态。
 
 如需重新采集，使用一个开启远程调试的独立 Chrome，打开游戏并等待标题页面加载，然后执行：
 
 ```sh
-node scripts/collect-game-assets.mjs http://127.0.0.1:9222
+node scripts/collect-game-assets.mjs http://127.0.0.1:9222 <游戏页面完整地址>
 ```
 
 脚本只连接已有游戏页；不会自动注册、登录或开始游戏。游戏构建可能更新，若找不到公开加载器，脚本会停止并要求检查新版结构。
@@ -137,4 +137,4 @@ node scripts/collect-game-assets.mjs http://127.0.0.1:9222
 
 `npm test` 使用 Playwright，在 Windows 优先使用已安装的 Chrome/Edge，也可通过 `SCUI_BROWSER_PATH` 指定浏览器。其他环境可执行 `npx playwright install chromium` 后运行。测试覆盖双向绑定、表单校验、禁用/加载状态、页签键盘操作、弹窗焦点管理、进度、资源过滤与桌面/手机横向溢出。先构建再运行测试，会额外验证编译后的组件库在独立页面中工作；没有构建产物时仅跳过这一项。
 
-`research/previews/` 保存已审核的桌面、手机和弹窗截图；测试运行截图保存在 Git 忽略的 `test-results/`。展示页的「原作控件与皮肤」分区提供新增控件及原作皮肤的完整交互示例。
+`npm test` 的截图保存在 Git 忽略的 `test-results/`。展示页的「原作控件与皮肤」分区提供新增控件及原作皮肤的完整交互示例。

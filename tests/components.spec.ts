@@ -8,7 +8,7 @@ test('catalog loads all local assets without console errors', async ({ page }) =
   page.on('pageerror', error => errors.push(error.message))
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()) })
   await page.reload()
-  await expect(page.getByRole('heading', { name: 'Shiny Colors UI' })).toBeVisible()
+  await expect(page.getByRole('heading', { name: 'SCUI' })).toBeVisible()
   await page.waitForLoadState('networkidle')
   const broken = await page.locator('img').evaluateAll(images => images.filter(image => !(image as HTMLImageElement).naturalWidth).map(image => (image as HTMLImageElement).src))
   expect(broken).toEqual([])
@@ -76,7 +76,7 @@ test('dialog traps focus, closes on Escape, restores focus, and commits demo act
   await expect(page.locator('#overlays')).toContainText('示例设置已保存')
 })
 
-test('progress completes and asset filter exposes all 47 original sprites', async ({ page }) => {
+test('progress completes and asset filter exposes all 46 original sprites', async ({ page }) => {
   const feedback = page.locator('#feedback')
   for (let i = 0; i < 4; i++) await feedback.getByRole('button', { name: '推进任务' }).click()
   await expect(feedback.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '100')
@@ -84,8 +84,8 @@ test('progress completes and asset filter exposes all 47 original sprites', asyn
   await feedback.getByRole('button', { name: '重置' }).click()
   await expect(feedback.getByRole('progressbar')).toHaveAttribute('aria-valuenow', '0')
   await page.locator('#assets').getByRole('combobox', { name: '素材分类' }).click()
-  await page.getByRole('option', { name: '全部 47 份素材' }).click()
-  await expect(page.locator('.asset-tile')).toHaveCount(47)
+  await page.getByRole('option', { name: '全部 46 份素材' }).click()
+  await expect(page.locator('.asset-tile')).toHaveCount(46)
 })
 
 test('desktop and mobile layouts have no horizontal overflow', async ({ page }) => {

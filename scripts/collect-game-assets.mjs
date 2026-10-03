@@ -4,12 +4,13 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { resolve } from 'node:path'
 
 const cdp = process.argv[2]
-if (!cdp) throw new Error('Usage: node scripts/collect-game-assets.mjs http://127.0.0.1:9222 (open the game in that browser first)')
+const pageUrl = process.argv[3]
+if (!cdp || !pageUrl) throw new Error('Usage: node scripts/collect-game-assets.mjs <CDP URL> <game page URL> (open the game in that browser first)')
 const prior = JSON.parse(await readFile(new URL('../research/assets-manifest.json', import.meta.url), 'utf8'))
 const browser = await chromium.connectOverCDP(cdp)
 try {
-  const page = browser.contexts().flatMap(context => context.pages()).find(page => new URL(page.url()).hostname === 'shinycolors.enza.fun')
-  if (!page) throw new Error('Open https://shinycolors.enza.fun/ and wait for the title screen first.')
+  const page = browser.contexts().flatMap(context => context.pages()).find(page => page.url() === pageUrl)
+  if (!page) throw new Error(`Open ${pageUrl} and wait for the title screen first.`)
   const script = await page.locator('script[src*="/app-"]').getAttribute('src')
   const source = await (await page.request.get(new URL(script, page.url()).href)).text()
   const chunkName = source.match(/n=self\.([\w$]+)=self\./)?.[1]
@@ -25,7 +26,7 @@ try {
       engine.loader.add(missing).load(() => { clearTimeout(timer); resolve() })
     })
     return {
-      source: location.origin, capturedAt: new Date().toISOString(),
+      capturedAt: new Date().toISOString(),
       atlases: Object.entries(engine.loader.resources).filter(([, resource]) => resource.data?.frames).map(([path, resource]) => ({ path, imageUrl: Object.values(resource.textures)[0]?.baseTexture.imageUrl })),
       assets: names.map(name => {
         const texture = engine.utils.TextureCache[name]
